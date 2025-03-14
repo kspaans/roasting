@@ -1,0 +1,7 @@
+compatibility_date = "2023-10-26"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[d1_databases]]
+binding = "roasts"
+database_name = "roasting"
+database_id = "eff98789-0e27-4079-ab74-b2f4a19980ce"

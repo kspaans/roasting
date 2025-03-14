@@ -1,0 +1,33 @@
+{
+  "name": "roasting",
+  "version": "0.0.0-semantically-versioned",
+  "description": "DB, and public website FE for Kyle's home coffee roasting.",
+  "main": " ",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "npx wrangler pages dev public --compatibility-date=2023-10-02 --compatibility-flag=nodejs_compat",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kspaans/roasting.git"
+  },
+  "keywords": [
+    "coffee",
+    "htmx",
+    "cloudflare",
+    "roasting",
+    "workers"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kspaans/roasting/issues"
+  },
+  "homepage": "https://github.com/kspaans/roasting#readme",
+  "dependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
