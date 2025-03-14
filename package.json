@@ -2,10 +2,6 @@
   "name": "roasting",
   "version": "0.0.0-semantically-versioned",
   "description": "DB, and public website FE for Kyle's home coffee roasting.",
-  "main": " ",
-  "directories": {
-    "lib": "lib"
-  },
   "scripts": {
     "dev": "npx wrangler pages dev public --compatibility-date=2023-10-02 --compatibility-flag=nodejs_compat",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +17,7 @@
     "roasting",
     "workers"
   ],
-  "author": "",
+  "author": "Kyle Spaans <kyle@spaans.ca>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kspaans/roasting/issues"
