@@ -132,6 +132,14 @@ export async function onRequestGet(context) {
       },
     })
   }
+
+  // any other URL
+  return new Response(`<html><body><h1>Not Found!</h1></body></html>`, {
+    headers: {
+      'Content-Type': 'text/html;charset=utf-8',
+    },
+    status: 404
+  })
 }
 
 function homepage() {
