@@ -52,16 +52,16 @@ export async function onRequestGet(context) {
     for (const roast of roasts) {
       doc += `
         <tr hx-target="this" hx-swap="outerHTML">
-          <td>${roasts[0].roast_id}</td>
-          <td><a href="/${LANG}/beans">${roasts[0].lot_id}</a></td>
-          <td>${roasts[0].roast_date}</td>
-          <td>${roasts[0].charge_temp}</td>
-          <td>${roasts[0].dry || '-'}</td>
-          <td>${Math.floor(roasts[0].first_crack/60)}:${roasts[0].first_crack%60}</td>
-          <td>${roasts[0].second_crack || '-'}</td>
-          <td>${Math.floor(roasts[0].roast_end/60)}:${roasts[0].roast_end%60}</td>
-          <td>${roasts[0].roasted_weight}</td>
-          <td>${((roasts[0].green_weight - roasts[0].roasted_weight) / roasts[0].green_weight) * 100}%</td>
+          <td>${roast.roast_id}</td>
+          <td><a href="/${LANG}/beans">${roast.lot_id}</a></td>
+          <td>${roast.roast_date}</td>
+          <td>${roast.charge_temp}</td>
+          <td>${roast.dry || '-'}</td>
+          <td>${Math.floor(roast.first_crack/60)}:${roast.first_crack%60}</td>
+          <td>${roast.second_crack || '-'}</td>
+          <td>${Math.floor(roast.roast_end/60)}:${roast.roast_end%60}</td>
+          <td>${roast.roasted_weight}</td>
+          <td>${((roast.green_weight - roast.roasted_weight) / roast.green_weight) * 100}%</td>
         </tr>
       `
     }
