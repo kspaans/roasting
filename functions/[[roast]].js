@@ -32,17 +32,18 @@ export async function onRequestGet(context) {
         <h1>Roasts</h1>
         <div> See all roasts here </div>
         <div>
-        <table class="primary">
+        <table class="primary" style="text-align: right;">
           <thead>
             <tr>
               <th>ID</th>
               <th>Beans</th>
               <th>Roast Date</th>
               <th>Charge Temp (F)</th>
-              <th>Dry Phase End</th>
+              <!--<th>Dry Phase End</th>-->
               <th>First Crack</th>
-              <th>Second Crack</th>
+              <!--<th>Second Crack</th>-->
               <th>Roast End</th>
+              <th>Development %</th>
               <th>Roasted Weight</th>
               <th>Green Bean Weight Loss</th>
             </tr>
@@ -56,12 +57,13 @@ export async function onRequestGet(context) {
           <td><a href="/${LANG}/beans">${roast.lot_id}</a></td>
           <td>${roast.roast_date}</td>
           <td>${roast.charge_temp}</td>
-          <td>${roast.dry || '-'}</td>
-          <td>${Math.floor(roast.first_crack/60)}:${roast.first_crack%60}</td>
-          <td>${roast.second_crack || '-'}</td>
-          <td>${Math.floor(roast.roast_end/60)}:${roast.roast_end%60}</td>
+          <!--<td>${roast.dry || '-'}</td>-->
+          <td>${Math.floor(roast.first_crack/60)}:${String(roast.first_crack%60).padStart(2, '0')}</td>
+          <!--<td>${roast.second_crack || '-'}</td>-->
+          <td>${Math.floor(roast.roast_end/60)}:${String(roast.roast_end%60).padStart(2, '0')}</td>
+          <td>${(((roast.roast_end - roast.first_crack) / roast.roast_end) * 100).toFixed(2)}%</td>
           <td>${roast.roasted_weight}</td>
-          <td>${((roast.green_weight - roast.roasted_weight) / roast.green_weight) * 100}%</td>
+          <td>${(((roast.green_weight - roast.roasted_weight) / roast.green_weight) * 100).toFixed(2)}%</td>
         </tr>
       `
     }
